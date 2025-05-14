@@ -1,0 +1,23 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>Restaurant</h1>
+  </div>
+</div>
+
+<%= render @restaurant %>
+
+<%= link_to "Add a review", new_restaurant_review_path(@restaurant), class: "btn btn-gradient" %>
+<p><strong>Reviews</strong></p>
+
+<ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item">
+      <%= review.content %> <%= review.rating %>
+    </li>
+  <% end %>
+</ul>
+<br>
+
+<div>
+<i class="fa-solid fa-house-chimney"><%= link_to "Back to Home", restaurants_path, class: "btn btn-gradient" %></i>
+</div>

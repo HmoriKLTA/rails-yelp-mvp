@@ -1,0 +1,13 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>New Restaurant!</h1>
+  </div>
+</div>
+
+<%= render "form", restaurant: @restaurant %>
+
+<br>
+
+<div>
+  <%= link_to "Back to Home", restaurants_path , class: "btn btn-gradient" %>
+</div>

@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+    <h1>New Review!</h1>
+  </div>
+</div>
+
+  <div class="form mt-2  d-flex justify-content-center">
+    <%= simple_form_for [@restaurant, @review] do |f| %>
+    <%= f.input :content %>
+    <%= f.input :rating, collection: [1, 2, 3, 4, 5], prompt: "Select a rating"%>
+
+    <%= f.submit "Submit review", class: "btn btn-gradient" %>
+    <% end %>
+  </div>
+
+  <div>
+    <%= link_to "Back", restaurant_path(@restaurant), class: "btn btn-gradient mt-2" %>
+  </div>
