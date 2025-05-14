@@ -1,18 +1,22 @@
-<div class="container">
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-    <h1>New Review!</h1>
+<div class="body mb-3 mx-3">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://plus.unsplash.com/premium_photo-1661883237884-263e8de8869b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D);">
+    <div class="container">
+      <h1>New Review!</h1>
+    </div>
   </div>
-</div>
 
-  <div class="form mt-2  d-flex justify-content-center">
-    <%= simple_form_for [@restaurant, @review] do |f| %>
+
+  <div class ="row justify-content-center">
+    <div class="form mt-3 mx-3 col-md-6 justify-content-center ">    <%= simple_form_for [@restaurant, @review] do |f| %>
     <%= f.input :content %>
     <%= f.input :rating, collection: [1, 2, 3, 4, 5], prompt: "Select a rating"%>
 
     <%= f.submit "Submit review", class: "btn btn-gradient" %>
     <% end %>
+    </div>
   </div>
 
-  <div>
+  <div class="back-home-btn">
     <%= link_to "Back", restaurant_path(@restaurant), class: "btn btn-gradient mt-2" %>
   </div>
+</div>

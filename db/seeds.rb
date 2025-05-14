@@ -10,7 +10,7 @@ require 'faker'
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-CATEGORY = ["chinese", "italian", "japanese", "french", "belgian"]
+CATEGORY = ["Chinese", "Italian", "Japanese", "French", "Belgian"]
 
 puts 'Cleaning out the DB...'
 Restaurant.destroy_all

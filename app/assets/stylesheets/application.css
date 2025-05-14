@@ -28,6 +28,13 @@
   opacity: 1;
 }
 
+.back-home-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 20px;
+}
+
 .btn-flat {
   color: white;
   padding: 8px 24px;

@@ -1,16 +1,21 @@
-<%= simple_form_for(@restaurant) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+<div class="form">
+  <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :address %>
-    <%= f.input :phone_number %>
-    <%= f.input :category, collection: ["chinese", "italian", "japanese", "french", "belgian"], prompt: "Select a category"%>
-
+  <div class="form-list">
+    <div class="row">
+      <div class="col">
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :phone_number %>
+        <%= f.input :category, collection: ["Chinese", "Italian", "Japanese", "French", "Belgian"], prompt: "Select a category"%>
+      </div>
+    </div>
   </div>
 
   <div class="form-actions">
     <%= f.button :submit, class: "btn btn-gradient"%>
   </div>
-<% end %>
+  <% end %>
+</div>

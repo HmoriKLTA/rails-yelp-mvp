@@ -1,16 +1,16 @@
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="body mb-3 mx-3">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://plus.unsplash.com/premium_photo-1661883237884-263e8de8869b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D);">
     <div class="container">
       <h1>Le Wagon/Yelp Restaurant!</h1>
       <%= link_to "Add a Restaurant", new_restaurant_path, class: "btn btn-gradient mt-3" %>
     </div>
   </div>
 
-  <h1 class="header-list text-center">List</h1>
-
-  <div class="cards">
+  <div class="cards mt-3">
       <% @restaurants.each do |restaurant| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-          <%= link_to restaurant.name, restaurant_path(restaurant) %>
+      <div class="card-category shadow-lg bg-black rounded" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          <%= link_to restaurant.name, restaurant_path(restaurant), class:"text-decoration-none text-white" %>
       </div>
       <% end %>
   </div>
+</body>

@@ -1,13 +1,19 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  <div class="container">
-    <h1>New Restaurant!</h1>
+<div class="body mb-3 mx-3 bg-light.bg-gradient">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://plus.unsplash.com/premium_photo-1661883237884-263e8de8869b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D);">
+    <div class="container">
+      <h1>Add a Restaurant!</h1>
+    </div>
   </div>
-</div>
 
-<%= render "form", restaurant: @restaurant %>
+  <div class ="row justify-content-center">
+    <div class="form mt-3 mx-3 col-md-6 justify-content-center ">
+      <%= render "form", restaurant: @restaurant %>
+    </div>
+  </div>
 
-<br>
+  <br>
+  <div class="back-home-btn">
+    <%= link_to "Back to Home", restaurants_path , class: "btn btn-gradient" %>
+  </div>
 
-<div>
-  <%= link_to "Back to Home", restaurants_path , class: "btn btn-gradient" %>
 </div>
