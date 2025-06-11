@@ -1,21 +1,28 @@
-<div class="form">
-  <%= simple_form_for(@restaurant) do |f| %>
-    <%= f.error_notification %>
-    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-list">
-    <div class="row">
-      <div class="col">
-        <%= f.input :name %>
-        <%= f.input :address %>
-        <%= f.input :phone_number %>
-        <%= f.input :category, collection: ["Chinese", "Italian", "Japanese", "French", "Belgian"], prompt: "Select a category"%>
-      </div>
+<!-- filepath: /home/h_mori/code/HmoriKLTA/rails-yelp-mvp/app/views/restaurants/_form.html.erb -->
+<div class="container my-4">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <%= simple_form_for(@restaurant) do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <%= f.input :name, input_html: { class: "form-control" }, label_html: { class: "form-label" } %>
+          </div>
+          <div class="col-md-6">
+            <%= f.input :address, input_html: { class: "form-control" }, label_html: { class: "form-label" } %>
+          </div>
+          <div class="col-md-6">
+            <%= f.input :phone_number, input_html: { class: "form-control" }, label_html: { class: "form-label" } %>
+          </div>
+          <div class="col-md-6">
+            <%= f.input :category, collection: ["Chinese", "Italian", "Japanese", "French", "Belgian"], prompt: "Select a category", input_html: { class: "form-select" }, label_html: { class: "form-label" } %>
+          </div>
+        </div>
+        <div class="mt-4 text-end">
+          <%= f.button :submit, class: "btn btn-primary" %>
+        </div>
+      <% end %>
     </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, class: "btn btn-gradient"%>
-  </div>
-  <% end %>
 </div>
